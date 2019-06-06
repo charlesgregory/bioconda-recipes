@@ -1,0 +1,40 @@
+{% set version = "0.7" %}
+{% set sha256 = "19b3d296d2dd9882d233d025ee6ba21b4b6cfe706d8fbd19603e3b9ffb08bb07" %}
+
+package:
+  name: mucor3
+  version: {{ version }}
+
+source:
+  - url: https://github.com/blachlylab/mucor3/archive/master.zip
+  - url: https://github.com/blachlylab/vcf_atomizer/archive/master.zip
+    folder: vcf_atomizer
+  - url: https://github.com/blachlylab/depthGauge/archive/master.zip
+    folder: depthGauge
+  - url: https://github.com/blachlylab/dhtslib/archive/v0.6.0.zip
+    folder: depthGauge/dhtslib
+
+build:
+  number: 0
+  skip: False
+
+requirements:
+  build:
+    - autoconf
+    - automake
+    - go
+    - ldc
+    - htslib
+    - {{ compiler('c') }}
+  run:
+    - python >=3.4
+    - pandas
+    - jq
+    - htslib
+
+
+
+about:
+  home: https://github.com/jfarek/alignstats
+  license: BSD
+  summary: Comprehensive alignment, whole-genome coverage, and capture coverage statistics.
