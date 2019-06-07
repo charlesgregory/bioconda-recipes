@@ -1,4 +1,4 @@
-{% set version = "0.7" %}
+{% set version = "0.1" %}
 {% set sha256 = "19b3d296d2dd9882d233d025ee6ba21b4b6cfe706d8fbd19603e3b9ffb08bb07" %}
 
 package:
@@ -7,34 +7,50 @@ package:
 
 source:
   - url: https://github.com/blachlylab/mucor3/archive/master.zip
+    sha256: fe2d6226bb6a14b0d489c4aca414eb1cbc6fa88cca7872ce27f9f3ff66cd6ca0
+
   - url: https://github.com/blachlylab/vcf_atomizer/archive/master.zip
     folder: vcf_atomizer
+    sha256: 404b7b87ced2b93c1bd988ad8d5f45c43758a0e1bb4094f5b1cdda2e527ed80f
+
   - url: https://github.com/blachlylab/depthGauge/archive/master.zip
     folder: depthGauge
+    sha256: 22311d3376615dbe2caaf0ac0f18862c07aafe2b5495a63085e244c3d761af4d
+
   - url: https://github.com/blachlylab/dhtslib/archive/v0.6.0.zip
     folder: depthGauge/dhtslib
+    sha256: a7a2b2c19e8f90ed9f4735041d09b506cffe19c0880ec0fee928bf21ab780c8e
 
 build:
   number: 0
   skip: False
+  entry_points:
+    - mucor3 = mucor.mucor:main
 
 requirements:
   build:
     - autoconf
     - automake
-    - go
+    - go-cgo
     - ldc
     - htslib
+    - python >=3
     - {{ compiler('c') }}
   run:
-    - python >=3.4
+    - python >=3
     - pandas
     - jq
     - htslib
 
+# test:
+#   commands:
+#     - mucor3 -h
+#     - depthgauge -h
+#     - atomizer -h
+
 
 
 about:
-  home: https://github.com/jfarek/alignstats
+  home: https://github.com/blachlylab/mucor3
   license: BSD
-  summary: Comprehensive alignment, whole-genome coverage, and capture coverage statistics.
+  summary: Aggregation of VCF data into useful spreadsheets.
