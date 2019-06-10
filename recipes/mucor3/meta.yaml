@@ -7,11 +7,11 @@ package:
 
 source:
   - url: https://github.com/blachlylab/mucor3/archive/master.zip
-    sha256: fe2d6226bb6a14b0d489c4aca414eb1cbc6fa88cca7872ce27f9f3ff66cd6ca0
+    sha256: 47e2555e49ff4b1c65309bdd217f115360706c89195d2beb50404c823b61a876
 
   - url: https://github.com/blachlylab/vcf_atomizer/archive/master.zip
     folder: vcf_atomizer
-    sha256: 404b7b87ced2b93c1bd988ad8d5f45c43758a0e1bb4094f5b1cdda2e527ed80f
+    sha256: 51fea9d8ae7447d76bd361f3e438a00120ee00a58b69268e2ff280d8d8a2a5d1
 
   - url: https://github.com/blachlylab/depthGauge/archive/master.zip
     folder: depthGauge
@@ -34,19 +34,23 @@ requirements:
     - go-cgo
     - ldc
     - htslib
-    - python >=3
     - {{ compiler('c') }}
+  host:
+    - python >=3
   run:
     - python >=3
+    - ldc
     - pandas
     - jq
     - htslib
 
-# test:
-#   commands:
-#     - mucor3 -h
-#     - depthgauge -h
-#     - atomizer -h
+test:
+  imports:
+    - mucor
+  commands:
+    - mucor3 -h
+    - depthgauge -h
+    - atomizer
 
 
 
