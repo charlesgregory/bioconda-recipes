@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/blachlylab/mucor3/archive/master.zip
-    sha256: 47e2555e49ff4b1c65309bdd217f115360706c89195d2beb50404c823b61a876
+  - url: https://github.com/blachlylab/mucor3/archive/v0.1.tar.gz
+    sha256: 8b236de6ec1435e5d82241a9acb7ce0063036282992b273550bed039ae4b7a3d
 
-  - url: https://github.com/blachlylab/vcf_atomizer/archive/master.zip
+  - url: https://github.com/blachlylab/vcf_atomizer/archive/v0.1.tar.gz
     folder: vcf_atomizer
-    sha256: 51fea9d8ae7447d76bd361f3e438a00120ee00a58b69268e2ff280d8d8a2a5d1
+    sha256: 349ceab5e369f9c439d8c16ea067b01b5958e25f8aec24ef8f2ae927f7399d94
 
-  - url: https://github.com/blachlylab/depthGauge/archive/master.zip
+  - url: https://github.com/blachlylab/depthGauge/archive/v0.1.tar.gz
     folder: depthGauge
-    sha256: 22311d3376615dbe2caaf0ac0f18862c07aafe2b5495a63085e244c3d761af4d
+    sha256: ffc169681a4c6b51c4a4e7df13ccf7d43610651bb4d7dd881dc737f8a28bbe1d
 
-  - url: https://github.com/blachlylab/dhtslib/archive/v0.6.0.zip
+  - url: https://github.com/blachlylab/dhtslib/archive/v0.6.0.tar.gz
     folder: depthGauge/dhtslib
-    sha256: a7a2b2c19e8f90ed9f4735041d09b506cffe19c0880ec0fee928bf21ab780c8e
+    sha256: 385221f09b26c211373bf52f9803101c3a409df8b81b591e4f9cec41a9c7991d
 
 build:
   number: 0
@@ -50,7 +50,7 @@ test:
   commands:
     - mucor3 -h
     - depthgauge -h
-    - atomizer
+    - vcf_atomizer
 
 
 
