@@ -1,17 +1,16 @@
-{% set version = "0.1" %}
-{% set sha256 = "19b3d296d2dd9882d233d025ee6ba21b4b6cfe706d8fbd19603e3b9ffb08bb07" %}
+{% set version = "0.2" %}
 
 package:
   name: mucor3
   version: {{ version }}
 
 source:
-  - url: https://github.com/blachlylab/mucor3/archive/v0.1.tar.gz
-    sha256: 8b236de6ec1435e5d82241a9acb7ce0063036282992b273550bed039ae4b7a3d
+  - url: https://github.com/blachlylab/mucor3/archive/v0.2.tar.gz
+    sha256: e890de2086bcd465856f134ff08c0279fe47a157961a75a358c59bcb7d002353
 
-  - url: https://github.com/blachlylab/vcf_atomizer/archive/v0.1.tar.gz
+  - url: https://github.com/blachlylab/vcf_atomizer/archive/v0.2.tar.gz
     folder: vcf_atomizer
-    sha256: 349ceab5e369f9c439d8c16ea067b01b5958e25f8aec24ef8f2ae927f7399d94
+    sha256: a62f31839f2798dec2f3c4ee04f239122ab816ec1ec09a9eb0ead7ad4f7e593b
 
   - url: https://github.com/blachlylab/depthGauge/archive/v0.1.tar.gz
     folder: depthGauge
