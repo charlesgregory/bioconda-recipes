@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/blachlylab/mucor3/archive/v0.2.tar.gz
-    sha256: e890de2086bcd465856f134ff08c0279fe47a157961a75a358c59bcb7d002353
+  - url: https://github.com/blachlylab/mucor3/archive/master.tar.gz
+    # sha256: e890de2086bcd465856f134ff08c0279fe47a157961a75a358c59bcb7d002353
 
-  - url: https://github.com/blachlylab/vcf_atomizer/archive/v0.2.tar.gz
+  - url: https://github.com/blachlylab/vcf_atomizer/archive/v0.3.tar.gz
     folder: vcf_atomizer
-    sha256: a62f31839f2798dec2f3c4ee04f239122ab816ec1ec09a9eb0ead7ad4f7e593b
+    sha256: 7aac23e1c7b0d8ed477da32a1f0c69cb17d25c63bfdc44fac38f498fc3017ce6
 
   - url: https://github.com/blachlylab/depthGauge/archive/v0.1.tar.gz
     folder: depthGauge
@@ -55,5 +55,5 @@ test:
 
 about:
   home: https://github.com/blachlylab/mucor3
-  license: BSD
+  license: MIT
   summary: Aggregation of VCF data into useful spreadsheets.
